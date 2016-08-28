@@ -19,3 +19,6 @@ columns:
         type: text
         searchable: true
         sortable: true
+    twitter:
+        label: 'sgdinstitute.directory::lang.human.twitter'
+        type: text

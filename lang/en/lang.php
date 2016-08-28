@@ -12,6 +12,7 @@
         'bio' => 'Bio',
         'group' => 'Group',
         'slug' => 'Slug',
+        'twitter' => 'Twitter',
     ],
     'group' => [
         'name' => 'Name',

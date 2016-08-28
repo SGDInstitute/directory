@@ -21,3 +21,6 @@
 1.0.8:
     - 'Updated table sgdinstitute_directory_human'
     - builder_table_update_sgdinstitute_directory_human_5.php
+1.0.9:
+    - 'Updated table sgdinstitute_directory_human'
+    - builder_table_update_sgdinstitute_directory_human_6.php

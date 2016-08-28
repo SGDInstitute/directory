@@ -24,8 +24,8 @@ fields:
         oc.commentPosition: ''
         span: auto
         type: text
-    social_media:
-        label: 'sgdinstitute.directory::lang.human.social_media'
+    twitter:
+        label: 'sgdinstitute.directory::lang.human.twitter'
         oc.commentPosition: ''
         span: auto
         type: text
