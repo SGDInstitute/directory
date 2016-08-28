@@ -30,7 +30,9 @@ class DirectoryList extends ComponentBase
         $humans = Human::with('headshot', 'group')->get();
 
         foreach ($humans as $index => &$human) {
-            $human->headshot->path = $human->headshot->getPath();
+            if (isset($human->headshot)) {
+                $human->headshot->path = $human->headshot->getPath();
+            }
         }
 
         return $humans;
@@ -40,13 +42,13 @@ class DirectoryList extends ComponentBase
     {
         return [
             'noHumansMessage' => [
-                'title'        => 'No Humans',
-                'description'  => 'Message to display on page if no humans are found.',
-                'type'         => 'string',
-                'default'      => 'No humans found',
-                'showExternalParam' => false
+                'title'             => 'No Humans',
+                'description'       => 'Message to display on page if no humans are found.',
+                'type'              => 'string',
+                'default'           => 'No humans found',
+                'showExternalParam' => false,
             ],
-            'humanPage' => [
+            'humanPage'       => [
                 'title'       => 'Human Page',
                 'description' => 'The page that shows the human in more detail.',
                 'type'        => 'dropdown',

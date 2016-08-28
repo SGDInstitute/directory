@@ -1,7 +1,9 @@
 <div class="directoryList clearfix">
     {% for human in directorylist.humans %}
     <div class="col-md-4">
+        {% if human.headshot.path %}
         <img class="img-responsive" src="{{ human.headshot.path }}" alt="{{ human.headshot.description }}">
+        {% endif %}
         <p>{{ human.name }}</p>
         <p>{{ human.position }}</p>
     </div>
