@@ -19,12 +19,6 @@ class DirectoryList extends ComponentBase
         ];
     }
 
-    // This array becomes available on the page as {{ component.posts }}
-    public function posts()
-    {
-        return ['First Post', 'Second Post', 'Third Post'];
-    }
-
     public function humans()
     {
         $humans = Human::with('headshot', 'group')->get();
