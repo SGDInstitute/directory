@@ -4,7 +4,7 @@ columns:
         type: text
         searchable: true
         sortable: true
-    postition:
+    position:
         label: 'sgdinstitute.directory::lang.human.position'
         type: text
         searchable: true
