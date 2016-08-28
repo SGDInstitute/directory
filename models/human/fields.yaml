@@ -1,0 +1,55 @@
+fields:
+    name:
+        label: 'sgdinstitute.directory::lang.human.name'
+        oc.commentPosition: ''
+        span: auto
+        required: 1
+        type: text
+    slug:
+        label: 'sgdinstitute.directory::lang.human.slug'
+        span: auto
+        oc.commentPosition: ''
+        preset:
+            field: name
+            type: slug
+        required: 1
+        type: text
+    position:
+        label: 'sgdinstitute.directory::lang.human.position'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    pronouns:
+        label: 'sgdinstitute.directory::lang.human.pronouns'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    social_media:
+        label: 'sgdinstitute.directory::lang.human.social_media'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    group:
+        label: 'sgdinstitute.directory::lang.human.group'
+        span: auto
+        oc.commentPosition: ''
+        nameFrom: name
+        descriptionFrom: description
+        type: relation
+    headshot:
+        label: 'sgdinstitute.directory::lang.human.headshot'
+        oc.commentPosition: ''
+        mode: file
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: full
+        type: fileupload
+    bio:
+        label: 'sgdinstitute.directory::lang.human.bio'
+        size: large
+        oc.commentPosition: ''
+        span: full
+        required: 1
+        type: richeditor

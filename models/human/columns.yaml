@@ -1,0 +1,21 @@
+columns:
+    name:
+        label: 'sgdinstitute.directory::lang.human.name'
+        type: text
+        searchable: true
+        sortable: true
+    postition:
+        label: 'sgdinstitute.directory::lang.human.position'
+        type: text
+        searchable: true
+        sortable: true
+    pronouns:
+        label: 'sgdinstitute.directory::lang.human.pronouns'
+        type: text
+        searchable: true
+        sortable: true
+    group:
+        label: 'sgdinstitute.directory::lang.human.group'
+        type: text
+        searchable: true
+        sortable: true

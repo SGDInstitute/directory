@@ -1,0 +1,11 @@
+columns:
+    name:
+        label: 'sgdinstitute.directory::lang.group.name'
+        type: text
+        searchable: true
+        sortable: true
+    key:
+        label: 'sgdinstitute.directory::lang.group.key'
+        type: text
+        searchable: true
+        sortable: true

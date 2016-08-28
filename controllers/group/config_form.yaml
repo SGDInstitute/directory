@@ -1,0 +1,10 @@
+name: Group
+form: $/sgdinstitute/directory/models/group/fields.yaml
+modelClass: SGDInstitute\Directory\Models\Group
+defaultRedirect: sgdinstitute/directory/group
+create:
+    redirect: 'sgdinstitute/directory/group/update/:id'
+    redirectClose: sgdinstitute/directory/group
+update:
+    redirect: sgdinstitute/directory/group
+    redirectClose: sgdinstitute/directory/group

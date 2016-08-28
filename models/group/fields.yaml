@@ -1,0 +1,15 @@
+fields:
+    name:
+        label: 'sgdinstitute.directory::lang.group.name'
+        oc.commentPosition: ''
+        span: auto
+        required: 1
+        type: text
+    key:
+        label: 'sgdinstitute.directory::lang.group.key'
+        span: auto
+        oc.commentPosition: ''
+        preset:
+            field: name
+            type: slug
+        type: text

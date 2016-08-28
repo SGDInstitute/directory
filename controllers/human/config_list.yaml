@@ -1,0 +1,11 @@
+list: $/sgdinstitute/directory/models/human/columns.yaml
+modelClass: SGDInstitute\Directory\Models\Human
+title: Human
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'sgdinstitute/directory/human/update/:id'

@@ -1,0 +1,10 @@
+name: Human
+form: $/sgdinstitute/directory/models/human/fields.yaml
+modelClass: SGDInstitute\Directory\Models\Human
+defaultRedirect: sgdinstitute/directory/human
+create:
+    redirect: 'sgdinstitute/directory/human/update/:id'
+    redirectClose: sgdinstitute/directory/human
+update:
+    redirect: sgdinstitute/directory/human
+    redirectClose: sgdinstitute/directory/human
