@@ -4,8 +4,9 @@
         {% if human.headshot.path %}
         <img class="img-responsive" src="{{ human.headshot.path }}" alt="{{ human.headshot.description }}">
         {% endif %}
-        <p>{{ human.name }}</p>
-        <p>{{ human.position }}</p>
+
+        <h3><a href="/human/{{ human.slug }}">{{ human.name }}</a></h3>
+        <p>{{ human.position }} {% if human.pronouns%} | <i>{{ human.pronouns }}</i>{% endif %}  </p>
     </div>
     {% endfor %}
 </div>
