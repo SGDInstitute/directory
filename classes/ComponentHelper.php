@@ -22,7 +22,7 @@ class ComponentHelper
     {
         if ($this->modelListCache !== null) {
             return $this->modelListCache;
-        }
+        } 
 
         $key = 'builder-global-model-list';
         $cached = Cache::get($key, false);
