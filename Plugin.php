@@ -7,7 +7,8 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'SGDInstitute\Directory\Components\DirectoryList' => 'directorylist'
+            'SGDInstitute\Directory\Components\DirectoryList' => 'directoryList',
+            'SGDInstitute\Directory\Components\DirectoryDetails' => 'directoryDetails',
         ];
     }
 

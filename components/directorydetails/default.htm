@@ -1,0 +1,19 @@
+{% set record = __SELF__.record %}
+{% set displayColumn = __SELF__.displayColumn %}
+{% set notFoundMessage = __SELF__.notFoundMessage %}
+
+{% if record %}
+
+{% if record.headshot.path %}
+<img class="img-responsive pull-right" src="{{ record.headshot.path }}" alt="{{ record.headshot.description }}">
+{% endif %}
+
+<h3>{{ record.name }}</h3>
+<p>{{ record.position }}</p>
+<p><i>{{ record.pronouns }}</i></p>
+<p><a href="https://twitter.com/{{ record.twitter }}" target="_blank"><i class="fa fa-twitter"></i> {{ record.twitter }}</a></p>
+{{ record.bio|raw }}
+
+{% else %}
+{{ notFoundMessage }}
+{% endif %}

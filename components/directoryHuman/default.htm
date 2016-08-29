@@ -1,9 +1,0 @@
-{% if human.headshot.path %}
-<img class="img-responsive pull-right" src="{{ human.headshot.path }}" alt="{{ human.headshot.description }}">
-{% endif %}
-
-<h3>{{ record.name }}</h3>
-<p>{{ record.position }}</p>
-<p>{{ record.pronouns }}</p>
-<p><a href="https://twitter.com/{{ record.twitter }}" target="_blank"><i class="fa fa-twitter"></i> {{ record.twitter }}</a></p>
-{{ record.bio|raw }}
