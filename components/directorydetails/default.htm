@@ -4,15 +4,25 @@
 
 {% if record %}
 
-{% if record.headshot.path %}
-<img class="img-responsive pull-right" src="{{ record.headshot.path }}" alt="{{ record.headshot.description }}">
-{% endif %}
+<h1 id="human-name">{{ record.name }}</h1>
 
-<h3>{{ record.name }}</h3>
-<p>{{ record.position }}</p>
-<p><i>{{ record.pronouns }}</i></p>
-<p><a href="https://twitter.com/{{ record.twitter }}" target="_blank"><i class="fa fa-twitter"></i> {{ record.twitter }}</a></p>
-{{ record.bio|raw }}
+<div class="row">
+    <div class="col-md-3">
+        {% if record.headshot.path %}
+        <img class="img-responsive" src="{{ record.headshot.path }}" alt="{{ record.headshot.description }}">
+        {% endif %}
+
+        <div class="human--info">
+            <p>{{ record.position }}</p>
+            <p><i>{{ record.pronouns }}</i></p>
+            <p><a href="https://twitter.com/{{ record.twitter }}" target="_blank"><i class="fa fa-twitter"></i> @{{
+                record.twitter }}</a></p>
+        </div>
+    </div>
+    <div class="col-md-9 mt-20-xs">
+        {{ record.bio|raw }}
+    </div>
+</div>
 
 {% else %}
 {{ notFoundMessage }}

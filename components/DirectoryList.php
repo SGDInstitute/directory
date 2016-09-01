@@ -3,7 +3,7 @@
 use Lang;
 use Cms\Classes\Page;
 use Cms\Classes\ComponentBase;
-use RainLab\Builder\Classes\ComponentHelper;
+//use RainLab\Builder\Classes\ComponentHelper;
 use SGDInstitute\Directory\Models\Human;
 use SystemException;
 use Exception;
@@ -51,6 +51,20 @@ class DirectoryList extends ComponentBase
      * @var string
      */
     public $detailsUrlParameter;
+
+    /**
+     * Names of the Human model columns
+     * @var array
+     */
+    public $columnNames = [
+        'name',
+        'bio',
+        'position',
+        'pronouns',
+        'twitter',
+        'group_id',
+        'slug',
+    ];
 
     public function componentDetails()
     {
@@ -111,8 +125,8 @@ class DirectoryList extends ComponentBase
                 'showExternalParam' => false,
                 'group'             => 'sorting',
                 'options'           => [
-                    'asc'   => 'Ascending',
-                    'desc'  => 'Descending'
+                    'asc'  => 'Ascending',
+                    'desc' => 'Descending',
                 ],
             ],
         ];
@@ -131,17 +145,17 @@ class DirectoryList extends ComponentBase
 
     public function getDisplayColumnOptions()
     {
-        return ComponentHelper::instance()->listModelColumnNames();
+        return $this->columnNames;
     }
 
     public function getDetailsKeyColumnOptions()
     {
-        return ComponentHelper::instance()->listModelColumnNames();
+        return $this->columnNames;
     }
 
     public function getSortColumnOptions()
     {
-        return ComponentHelper::instance()->listModelColumnNames();
+        return $this->columnNames;
     }
 
     //

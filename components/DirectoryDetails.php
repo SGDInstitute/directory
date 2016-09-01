@@ -2,7 +2,7 @@
 
 use Lang;
 use Cms\Classes\ComponentBase;
-use RainLab\Builder\Classes\ComponentHelper;;
+use SGDInstitute\Directory\Classes\ComponentHelper;
 use SystemException;
 
 class DirectoryDetails extends ComponentBase
@@ -30,6 +30,20 @@ class DirectoryDetails extends ComponentBase
      * @var string
      */
     public $identifierValue;
+
+    /**
+     * Names of the Human model columns
+     * @var array
+     */
+    public $columnNames = [
+        'name',
+        'bio',
+        'position',
+        'pronouns',
+        'twitter',
+        'group_id',
+        'slug',
+    ];
 
     public function componentDetails()
     {
@@ -81,7 +95,7 @@ class DirectoryDetails extends ComponentBase
 
     public function getModelKeyColumnOptions()
     {
-        return ComponentHelper::instance()->listModelColumnNames();
+        return $this->columnNames;
     }
 
     //
@@ -93,6 +107,7 @@ class DirectoryDetails extends ComponentBase
         $this->prepareVars();
 
         $this->record = $this->page['record'] = $this->loadRecord();
+        $this->page->title = $this->record->name;
     }
 
     protected function prepareVars()

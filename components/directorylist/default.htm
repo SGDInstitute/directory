@@ -4,21 +4,26 @@
 {% set detailsKeyColumn = __SELF__.detailsKeyColumn %}
 {% set detailsUrlParameter = __SELF__.detailsUrlParameter %}
 
-<div class="directoryList clearfix">
+<div class="row directory-list clearfix">
     {% for record in records %}
-    <div class="col-md-4">
-        {% if record.headshot.path %}
-        <img class="img-responsive" src="{{ record.headshot.path }}" alt="{{ record.headshot.description }}">
-        {% endif %}
+    <div class="col-md-4 col-sm-6 col-xs-6">
+        <div class="directory-item">
+            {% if record.headshot.path %}
+            <img class="img-responsive" src="{{ record.headshot.path }}" alt="{{ record.headshot.description }}">
+            {% endif %}
 
-        {% if detailsPage %}
-        <h3><a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}">{{
-            record.name }}</a></h3>
-        {% else %}
-        <h3>{{ record.name }}</h3>
-        {% endif %}
+            {% if detailsPage %}
+            <h3><a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}">{{
+                record.name }}</a></h3>
+            {% else %}
+            <h3>{{ record.name }}</h3>
+            {% endif %}
 
-        <p>{{ record.position }} {% if record.pronouns%} | <i>{{ record.pronouns }}</i>{% endif %} </p>
+            <p>{{ record.position }}</p>
+            {% if record.pronouns%}
+            <p><i>{{ record.pronouns }}</i></p>
+            {% endif %}
+        </div>
     </div>
     {% else %}
     <p>{{ noRecordsMessage }}</p>
