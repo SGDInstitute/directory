@@ -14,6 +14,11 @@ fields:
             type: slug
         required: 1
         type: text
+    email:
+        label: Email
+        oc.commentPosition: ''
+        span: auto
+        type: text
     position:
         label: 'sgdinstitute.directory::lang.human.position'
         oc.commentPosition: ''
@@ -44,7 +49,7 @@ fields:
         thumbOptions:
             mode: crop
             extension: auto
-        span: full
+        span: auto
         type: fileupload
     bio:
         label: 'sgdinstitute.directory::lang.human.bio'

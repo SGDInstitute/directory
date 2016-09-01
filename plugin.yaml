@@ -10,6 +10,10 @@ navigation:
         url: sgdinstitute/directory/human
         icon: icon-users
         sideMenu:
+            add-human:
+                label: 'Add New Human'
+                url: sgdinstitute/directory/human/create
+                icon: icon-plus
             human:
                 label: 'sgdinstitute.directory::lang.directory.humans'
                 url: sgdinstitute/directory/human

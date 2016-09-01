@@ -22,3 +22,10 @@ columns:
     twitter:
         label: 'sgdinstitute.directory::lang.human.twitter'
         type: text
+        searchable: true
+        sortable: true
+    email:
+        label: Email
+        type: text
+        searchable: true
+        sortable: true
