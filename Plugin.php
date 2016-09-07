@@ -9,6 +9,7 @@ class Plugin extends PluginBase
         return [
             'SGDInstitute\Directory\Components\DirectoryList' => 'directoryList',
             'SGDInstitute\Directory\Components\DirectoryDetails' => 'directoryDetails',
+            'SGDInstitute\Directory\Components\DirectoryContact' => 'directoryContact',
         ];
     }
 

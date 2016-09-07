@@ -19,6 +19,8 @@ columns:
         type: text
         searchable: true
         sortable: true
+        relation: group
+        valueFrom: name
     twitter:
         label: 'sgdinstitute.directory::lang.human.twitter'
         type: text

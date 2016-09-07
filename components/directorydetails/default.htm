@@ -13,10 +13,22 @@
         {% endif %}
 
         <div class="human--info">
+            {% if record.position %}
             <p>{{ record.position }}</p>
+            {% endif %}
+
+            {% if record.pronouns %}
             <p><i>{{ record.pronouns }}</i></p>
+            {% endif %}
+
+            {% if record.email %}
+            <p><a href="mailto:{{ record.email }}">{{ record.email }}</a></p>
+            {% endif %}
+
+            {% if record.twitter %}
             <p><a href="https://twitter.com/{{ record.twitter }}" target="_blank"><i class="fa fa-twitter"></i> @{{
                 record.twitter }}</a></p>
+            {% endif %}
         </div>
     </div>
     <div class="col-md-9 mt-20-xs">

@@ -1,0 +1,33 @@
+{% set record = __SELF__.record %}
+{% set notFoundMessage = __SELF__.notFoundMessage %}
+
+{% if record %}
+
+<div class="human--contact row sm-gutter">
+    <div class="col-md-4">
+        {% if record.headshot.path %}
+        <a href="/about/governance/{{ record.slug }}">
+            <img class="img-responsive" src="{{ record.headshot.path }}" alt="{{ record.headshot.description }}">
+        </a>
+        {% endif %}
+    </div>
+    <div class="col-md-8">
+        <p><a href="/about/governance/{{ record.slug }}"><strong>{{ record.name }}</strong></a></p>
+        {% if record.position %}
+        <p>{{ record.position }}</p>
+        {% endif %}
+
+        {% if record.pronouns %}
+        <p><i>{{ record.pronouns }}</i></p>
+        {% endif %}
+
+        {% if record.email %}
+        <p><a href="mailto:{{ record.email }}">{{ record.email }}</a></p>
+        {% endif %}
+    </div>
+
+</div>
+
+{% else %}
+{{ notFoundMessage }}
+{% endif %}
